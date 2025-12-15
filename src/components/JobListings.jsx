@@ -1,6 +1,6 @@
 import React from "react"
 import jobs from "../jobs.json"
-import Job from "./Job"
+import JobListing from "./JobListing"
 
 const JobListings = () => {
   return (
@@ -14,13 +14,8 @@ const JobListings = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {jobs.map((job) => {
               return (
-                <Job
-                  title={job.title}
-                  description={job.description}
-                  type={job.type}
-                  salary={job.salary}
-                  location={job.location}
-                  id={job.id}/>
+                <JobListing
+                  key={job.id} job={job}/>
               )
             })}
           </div>

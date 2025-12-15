@@ -1,6 +1,7 @@
 import React from "react"
 
-const Job = ( {title, type, description, salary, location, id} ) => {
+const JobListing = ( { job } ) => {
+  const { id, title, type, description, salary, location } = job
   return (
     <div className="bg-white rounded-xl shadow-md relative">
       <div className="p-4">
@@ -32,4 +33,4 @@ const Job = ( {title, type, description, salary, location, id} ) => {
   )
 }
 
-export default Job
+export default JobListing
