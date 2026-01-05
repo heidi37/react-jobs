@@ -1,12 +1,12 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+
+import JobListings from '../components/JobListings'
 
 const JobsPage = () => {
   return (
-    <>
-      <Outlet />
-      <h1>About</h1>
-    </>
+    <section className="bg-blue-50 px-4 py-6">
+      <JobListings />
+    </section>
   )
 }
 
