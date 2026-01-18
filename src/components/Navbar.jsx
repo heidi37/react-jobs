@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom"
 import logo from "../assets/images/logo.png"
 
 const Navbar = () => {
+  
   const linkClass = function ({ isActive }) {
     return isActive
       ? "text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
