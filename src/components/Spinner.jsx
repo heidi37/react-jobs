@@ -8,7 +8,6 @@ const override = {
 
 const Spinner = ( { loading } ) => {
   return (
-    <div>
       <ClipLoader
         color="#4338ca"
         loading={ loading }
@@ -17,7 +16,6 @@ const Spinner = ( { loading } ) => {
         aria-label="Loading Spinner"
         data-testid="loader"
       />
-    </div>
   )
 }
 
