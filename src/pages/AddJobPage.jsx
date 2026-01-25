@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const AddJobPage = ( {addJobSubmit} ) => {
   const [title, setTitle] = useState('');
@@ -18,8 +19,7 @@ const AddJobPage = ( {addJobSubmit} ) => {
 
   const submitForm = (e) => {
     e.preventDefault()
-    console.log(description);
-    //Let's construct an object from our form fields that we want to submit to our API
+    //Construct an object from our form fields that we want to submit to our API
     const newJob = {
       title,
       type,
@@ -34,6 +34,7 @@ const AddJobPage = ( {addJobSubmit} ) => {
       }
     }
     addJobSubmit(newJob)
+    toast.success('Job Added Successfully')
     return navigate('/jobs')
   }
  
